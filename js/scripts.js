@@ -1,15 +1,24 @@
 $(document).ready(function() {
   $("form#formOne").submit(function(event) {
+    
     const userInput = [$("input#list").val()];
     let upperCaseList = [];
     userInput.forEach(function(element) {
   
     upperCaseList.push(element);
     $("div#results").append(upperCaseList);
+
     event.preventDefault();
     });
   });
 });
+
+
+
+
+
+
+
     // const groceryList = [];
     // event.preventDefault();
 
