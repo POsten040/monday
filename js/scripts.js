@@ -1,17 +1,42 @@
-$(document).ready(function() {
-  $("form#formOne").submit(function(event) {
-    
-    const userInput = [$("input#list").val()];
-    let upperCaseList = [];
-    userInput.forEach(function(element) {
-  
-    upperCaseList.push(element);
-    $("div#results").append(upperCaseList);
+$(document).ready(function(){
 
-    event.preventDefault();
-    });
+  let groceryList = [];
+
+  $("#typeIn").submit(function() {
+
+    let item=$("#items").val();
+
+    if (item.length != 0) {
+      groceryList.push(item)
+      $("#typeIn")[0].reset();
+      // $("div#results").append(groceryList);
+      
+    }
   });
 });
+
+
+
+
+
+
+
+
+
+// $(document).ready(function() {
+//   $("form#formOne").submit(function(event) {
+    
+//     const userInput = [$("input#list").val()];
+//     let upperCaseList = [];
+//     userInput.forEach(function(element) {
+  
+//     upperCaseList.push(element);
+//     $("div#results").append(upperCaseList);
+
+//     event.preventDefault();
+//     });
+//   });
+// });
 
 
 
