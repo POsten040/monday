@@ -1,21 +1,33 @@
 $(document).ready(function() {
-  const groceryList = [];
-  $("formOne").submit(function(event) {
+  $("form#formOne").submit(function(event) {
+    const userInput = [$("input#list").val()];
+    let upperCaseList = [];
+    userInput.forEach(function(element) {
+    upperCaseList.push(element);
+    $("div#results").append(upperCaseList);
     event.preventDefault();
-    
-    let userInput = $("input#list").val();
-    
-    userInput.sort();
-    groceryList.push(userInput);
-
-    
-    newList = groceryList.join[", "];
-    $("div#list").text(newList);
-    $(".list").show(newList);
+    });
   });
 });
+    // const groceryList = [];
+    // event.preventDefault();
+
+    // $("#results").show();
+    // $("span#final").append().text(list);
+
+
+
+    // let grocery = $("input#list").val();
+
+    // grocery.sort();
+    // grocery.push(list);
+
+
+    // newList = groceryList.join[", "];
+    // $(".final").text(newList);
+    // $(".final").show(newList);
+
+//   });
+// });
 
     // $("span#grocery").prepend().text(list);
-
-  
-
