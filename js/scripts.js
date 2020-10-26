@@ -3,6 +3,7 @@ $(document).ready(function() {
     const userInput = [$("input#list").val()];
     let upperCaseList = [];
     userInput.forEach(function(element) {
+  
     upperCaseList.push(element);
     $("div#results").append(upperCaseList);
     event.preventDefault();
